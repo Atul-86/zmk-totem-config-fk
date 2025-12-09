@@ -14,7 +14,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/pointing.h>
 
 #define BASE 0
 #define NAV  1
@@ -36,6 +35,11 @@
             timeout-ms = <50>;
             key-positions = <0 1>;
             bindings = <&kp ESC>;
+        };
+
+        word_delete {
+            bindings = <&kp LA(BACKSPACE)>;
+            key-positions = <33 36>;
         };
     };
 
@@ -78,10 +82,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                  &kp Q       &kp W       &kp E         &kp R        &kp T            &kp Y        &kp U        &kp I          &kp O       &kp P
-                  &mt LGUI A  &mt LALT S  &mt LCTRL D   &mt LSHFT F  &kp G            &kp H        &mt RSHFT J  &mt RCTRL K    &mt RALT L  &mt RGUI SEMI
-&kp LEFT_CONTROL  &kp Z       &kp X       &kp C         &kp V        &kp B            &kp N        &kp M        &kp COMMA      &kp DOT     &kp SLASH       &kp APOS
-                                          &kp LEFT_GUI  &kp TAB      &lt NAV SPACE    &lt SYM RET  &kp BSPC     &kp LEFT_ALT
+                                  &kp W               &kp L       &kp Y             &kp P               &kp B            &kp Z            &kp F                &kp O              &kp U       &kp SQT
+                                  &mt LEFT_CONTROL C  &mt LALT R  &mt LEFT_SHIFT S  &mt LEFT_COMMAND T  &kp G            &kp M            &mt RIGHT_COMMAND N  &mt RIGHT_SHIFT E  &mt RALT I  &mt RIGHT_CONTROL A
+&mt LA(LEFT_SHIFT) LA(BACKSPACE)  &kp Q               &kp J       &kp V             &kp D               &kp K            &kp X            &kp H                &kp SLASH          &kp COMMA   &kp PERIOD           &kp SEMI
+                                                                  &lt 4 MINUS       &lt 2 SPACE         &lt NAV ENTER    &mt LS(TAB) TAB  &kp BSPC             &kp ESCAPE
             >;
         };
 
@@ -90,7 +94,7 @@
         nav_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
-            label = "NAVI";
+            label = "NUM";
 
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
@@ -104,10 +108,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &kp ESC    &bt BT_CLR  &kp UP    &kp EQUAL  &kp LBRC    &kp RBRC  &kp N7        &kp N8        &kp N9        &kp KP_PLUS
-            &kp LSHFT  &kp LEFT    &kp DOWN  &kp RIGHT  &kp LBKT    &kp RBKT  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_MINUS
-&caps_word  &kp DEL    &kp PG_UP   &kp CAPS  &kp PG_DN  &kp LPAR    &kp RPAR  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &trans
-                                   &trans    &trans     &trans      &mo ADJ   &kp KP_N0     &trans
+            &kp ESC    &bt BT_CLR  &kp UP    &kp EQUAL  &kp LBRC    &kp KP_SUBTRACT  &kp N7        &kp N8        &kp N9        &kp KP_DIVIDE
+            &kp LSHFT  &kp LEFT    &kp DOWN  &kp RIGHT  &kp LBKT    &kp KP_PLUS      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp N0
+&caps_word  &kp DEL    &kp PG_UP   &kp CAPS  &kp PG_DN  &kp LPAR    &kp RPAR         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &trans
+                                   &trans    &trans     &trans      &trans           &trans        &trans
             >;
         };
 
@@ -116,7 +120,7 @@
         sim_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
-            label = "SYM";
+            label = "SYM_NAV";
 
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
@@ -130,10 +134,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp EXCL     &kp AT       &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS      &kp RA(U)             &kp SQT                &kp DQT
-        &kp RA(A)    &trans       &kp RA(S)  &trans    &trans       &kp MINUS  &kp EQUAL     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RA(O)
-&trans  &kp RA(F18)  &kp RA(F19)  &trans     &trans    &trans       &kp GRAVE  &kp ASTERISK  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BSLH   &trans
-                                  &trans     &gif      &mo ADJ      &trans     &kp C_PP      &trans
+               &kp AT_SIGN             &kp EXCLAMATION                &kp HASH                          &kp DLLR                &kp NON_US_BACKSLASH    &kp PAGE_UP    &kp LA(LEFT_ARROW)            &kp UP_ARROW                &kp LA(RIGHT_ARROW)        &kp DQT
+               &mt LEFT_CONTROL CARET  &mt LEFT_ALT LEFT_PARENTHESIS  &mt LEFT_SHIFT RIGHT_PARENTHESIS  &mt LEFT_COMMAND UNDER  &kp PERCENT             &kp PAGE_DOWN  &mt RIGHT_COMMAND LEFT_ARROW  &mt RIGHT_SHIFT DOWN_ARROW  &mt RIGHT_ALT RIGHT_ARROW  &mt LG(RIGHT_CONTROL) LG(LEFT_ARROW)
+&kp SEMICOLON  &kp RA(TILDE)           &kp LEFT_BRACKET               &kp RIGHT_BRACKET                 &kp EQUAL               &kp STAR                &kp DELETE     &kp LS(LG(TAB))               &kp LG(TAB)                 &kp LC(LEFT_ARROW)         &kp LC(RIGHT_ARROW)                   &kp LG(RIGHT_ARROW)
+                                                                      &trans                            &trans                  &trans                  &trans         &trans                        &trans
             >;
         };
 
@@ -160,6 +164,15 @@
               &bootloader   &trans        &trans        &trans        &trans            &trans  &kp F4  &kp F5  &kp F6  &kp F11
 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR_ALL    &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
                                           &trans        &trans        &trans            &trans  &trans  &trans
+            >;
+        };
+
+        Screen_Mgt {
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans         &trans         &trans                   &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &kp LG(LS(I))  &kp LS(LG(U))  &kp LA(LC(RIGHT_ARROW))  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans         &trans         &trans                   &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans         &trans
             >;
         };
     };
