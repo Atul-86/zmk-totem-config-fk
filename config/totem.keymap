@@ -82,16 +82,16 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                                  &kp W               &kp L       &kp Y             &kp P               &kp B            &kp Z            &kp F                &kp O              &kp U       &kp SQT
-                                  &mt LEFT_CONTROL C  &mt LALT R  &mt LEFT_SHIFT S  &mt LEFT_COMMAND T  &kp G            &kp M            &mt RIGHT_COMMAND N  &mt RIGHT_SHIFT E  &mt RALT I  &mt RIGHT_CONTROL A
-&mt LA(LEFT_SHIFT) LA(BACKSPACE)  &kp Q               &kp J       &kp V             &kp D               &kp K            &kp X            &kp H                &kp SLASH          &kp COMMA   &kp PERIOD           &kp SEMI
-                                                                  &lt 4 MINUS       &lt 2 SPACE         &lt NAV ENTER    &mt LS(TAB) TAB  &kp BSPC             &kp ESCAPE
+                                  &kp W               &kp L        &kp Y             &kp P               &kp B            &kp Z            &kp F                     &kp O              &kp U       &kp SQT
+                                  &mt LEFT_CONTROL C  &mt LALT R   &mt LEFT_SHIFT S  &mt LEFT_COMMAND T  &kp G            &kp M            &mt RIGHT_COMMAND N       &mt RIGHT_SHIFT E  &mt RALT I  &mt RIGHT_CONTROL A
+&mt LA(LEFT_SHIFT) LA(BACKSPACE)  &mt LG(Z) Q         &mt LG(X) J  &mt LG(C) V       &kp D               &mt LG(V) K      &kp X            &kp H                     &kp SLASH          &kp COMMA   &kp PERIOD           &kp SEMI
+                                                                   &lt 4 MINUS       &lt 2 SPACE         &lt NAV ENTER    &mt LS(TAB) TAB  &mt LEFT_SHIFT BACKSPACE  &lt 3 ESCAPE
             >;
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-        nav_layer {
+        num_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
             label = "NUM";
@@ -110,14 +110,14 @@
             bindings = <
             &kp ESC    &bt BT_CLR  &kp UP    &kp EQUAL  &kp LBRC    &kp KP_SUBTRACT  &kp N7        &kp N8        &kp N9        &kp KP_DIVIDE
             &kp LSHFT  &kp LEFT    &kp DOWN  &kp RIGHT  &kp LBKT    &kp KP_PLUS      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp N0
-&caps_word  &kp DEL    &kp PG_UP   &kp CAPS  &kp PG_DN  &kp LPAR    &kp RPAR         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &trans
+&caps_word  &kp DEL    &kp PG_UP   &kp CAPS  &kp PG_DN  &kp LPAR    &kp DELETE       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &trans
                                    &trans    &trans     &trans      &trans           &trans        &trans
             >;
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-        sim_layer {
+        sim_nav_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
             label = "SYM_NAV";
@@ -136,14 +136,14 @@
             bindings = <
                &kp AT_SIGN             &kp EXCLAMATION                &kp HASH                          &kp DLLR                &kp NON_US_BACKSLASH    &kp PAGE_UP    &kp LA(LEFT_ARROW)            &kp UP_ARROW                &kp LA(RIGHT_ARROW)        &kp DQT
                &mt LEFT_CONTROL CARET  &mt LEFT_ALT LEFT_PARENTHESIS  &mt LEFT_SHIFT RIGHT_PARENTHESIS  &mt LEFT_COMMAND UNDER  &kp PERCENT             &kp PAGE_DOWN  &mt RIGHT_COMMAND LEFT_ARROW  &mt RIGHT_SHIFT DOWN_ARROW  &mt RIGHT_ALT RIGHT_ARROW  &mt LG(RIGHT_CONTROL) LG(LEFT_ARROW)
-&kp SEMICOLON  &kp RA(TILDE)           &kp LEFT_BRACKET               &kp RIGHT_BRACKET                 &kp EQUAL               &kp STAR                &kp DELETE     &kp LS(LG(TAB))               &kp LG(TAB)                 &kp LC(LEFT_ARROW)         &kp LC(RIGHT_ARROW)                   &kp LG(RIGHT_ARROW)
+&kp SEMICOLON  &kp RA(TILDE)           &kp LEFT_BRACKET               &kp RIGHT_BRACKET                 &kp EQUAL               &kp STAR                &kp DELETE     &kp LS(LC(TAB))               &kp LC(TAB)                 &kp LC(LEFT_ARROW)         &kp LC(RIGHT_ARROW)                   &kp LG(RIGHT_ARROW)
                                                                       &trans                            &trans                  &trans                  &trans         &trans                        &trans
             >;
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-        adjust_layer {
+        adjust_f_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
             label = "ADJ";
@@ -169,10 +169,10 @@
 
         Screen_Mgt {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans         &trans         &trans                   &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &kp LG(LS(I))  &kp LS(LG(U))  &kp LA(LC(RIGHT_ARROW))  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans         &trans         &trans                   &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans         &trans
+        &kp F12  &kp F9      &kp F8      &kp LC(F7)  &trans    &trans  &mt LS(LA(LC(J))) LS(LA(J))  &mt LS(LA(LC(L))) LS(LA(L))  &trans                   &trans
+        &kp F11  &kp LC(F6)  &kp LC(F5)  &kp LC(F4)  &trans    &trans  &kp LG(LS(I))                &kp LS(LG(U))                &kp LA(LC(RIGHT_ARROW))  &trans
+&trans  &kp F10  &kp LC(F3)  &kp LC(F2)  &kp LC(F1)  &trans    &trans  &mt LS(LA(LC(K))) LS(LA(K))  &mt LS(LA(LC(H))) LS(LA(H))  &trans                   &trans  &trans
+                             &trans      &trans      &trans    &trans  &kp LS(LA(SPACE))            &trans
             >;
         };
     };
