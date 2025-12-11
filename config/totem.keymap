@@ -169,9 +169,9 @@
 
         Screen_Mgt {
             bindings = <
-        &kp F12  &kp F9      &kp F8      &kp LC(F7)  &trans    &trans  &mt LS(LA(LC(J))) LS(LA(J))  &mt LS(LA(LC(L))) LS(LA(L))  &trans                   &trans
-        &kp F11  &kp LC(F6)  &kp LC(F5)  &kp LC(F4)  &trans    &trans  &kp LG(LS(I))                &kp LS(LG(U))                &kp LA(LC(RIGHT_ARROW))  &trans
-&trans  &kp F10  &kp LC(F3)  &kp LC(F2)  &kp LC(F1)  &trans    &trans  &mt LS(LA(LC(K))) LS(LA(K))  &mt LS(LA(LC(H))) LS(LA(H))  &trans                   &trans  &trans
+        &kp F12  &kp F9      &kp F8      &kp LC(F7)  &trans    &trans  &mt LS(LA(LC(J))) LS(LA(J))  &mt LS(LA(LC(L))) LS(LA(L))  &trans         &trans
+        &kp F11  &kp LC(F6)  &kp LC(F5)  &kp LC(F4)  &trans    &trans  &kp LC(LA(LEFT_ARROW))       &kp LS(LG(I))                &kp LS(LG(U))  &kp LC(LA(RIGHT_ARROW))
+&trans  &kp F10  &kp LC(F3)  &kp LC(F2)  &kp LC(F1)  &trans    &trans  &mt LS(LA(LC(K))) LS(LA(K))  &mt LS(LA(LC(H))) LS(LA(H))  &trans         &trans                   &trans
                              &trans      &trans      &trans    &trans  &kp LS(LA(SPACE))            &trans
             >;
         };
