@@ -134,10 +134,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp AT_SIGN             &kp EXCLAMATION                &kp HASH                          &kp PERCENT             &kp NON_US_BACKSLASH    &kp PAGE_UP      &kp LA(LEFT_ARROW)            &kp UP_ARROW                &kp LA(RIGHT_ARROW)        &kp KP_NUMBER_3
-           &mt LEFT_CONTROL CARET  &mt LEFT_ALT LEFT_PARENTHESIS  &mt LEFT_SHIFT RIGHT_PARENTHESIS  &mt LEFT_COMMAND EQUAL  &kp DOLLAR              &kp PAGE_DOWN    &mt RIGHT_COMMAND LEFT_ARROW  &mt RIGHT_SHIFT DOWN_ARROW  &mt RIGHT_ALT RIGHT_ARROW  &mt LG(RIGHT_CONTROL) LG(LEFT_ARROW)
-&kp TILDE  &kp RA(TILDE)           &kp LEFT_BRACKET               &kp RIGHT_BRACKET                 &kp MINUS               &kp STAR                &kp DELETE       &kp LS(LC(TAB))               &kp LC(TAB)                 &kp LC(LEFT_ARROW)         &kp LC(RIGHT_ARROW)                   &kp LG(RIGHT_ARROW)
-                                                                  &trans                            &trans                  &trans                  &kp KP_NUMBER_0  &kp KP_NUMBER_1               &kp KP_NUMBER_2
+           &kp AT_SIGN             &kp EXCLAMATION                &kp HASH                          &kp PERCENT             &kp BACKSLASH    &kp PAGE_UP      &kp LA(LEFT_ARROW)            &kp UP_ARROW                &kp LA(RIGHT_ARROW)        &kp KP_NUMBER_3
+           &mt LEFT_CONTROL CARET  &mt LEFT_ALT LEFT_PARENTHESIS  &mt LEFT_SHIFT RIGHT_PARENTHESIS  &mt LEFT_COMMAND EQUAL  &kp DOLLAR       &kp PAGE_DOWN    &mt RIGHT_COMMAND LEFT_ARROW  &mt RIGHT_SHIFT DOWN_ARROW  &mt RIGHT_ALT RIGHT_ARROW  &mt LG(RIGHT_CONTROL) LG(LEFT_ARROW)
+&kp GRAVE  &kp RA(TILDE)           &kp LEFT_BRACKET               &kp RIGHT_BRACKET                 &kp MINUS               &kp STAR         &kp DELETE       &kp LS(LC(TAB))               &kp LC(TAB)                 &kp LC(LEFT_ARROW)         &kp LC(RIGHT_ARROW)                   &kp LG(RIGHT_ARROW)
+                                                                  &trans                            &trans                  &trans           &kp KP_NUMBER_0  &kp KP_NUMBER_1               &kp KP_NUMBER_2
             >;
         };
 
@@ -160,10 +160,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-              &sys_reset    &trans        &out OUT_TOG  &trans        &trans            &trans  &kp F7  &kp F8  &kp F9  &kp F12
-              &bootloader   &trans        &trans        &trans        &trans            &trans  &kp F4  &kp F5  &kp F6  &kp F11
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR_ALL    &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
-                                          &trans        &trans        &trans            &trans  &trans  &trans
+              &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2       &bt BT_SEL 3     &bt BT_SEL 4      &trans  &kp F7  &kp F8  &kp F9  &kp F12
+              &trans        &trans        &trans             &trans           &trans            &trans  &kp F4  &kp F5  &kp F6  &kp F11
+&out OUT_TOG  &kp GRAVE     &kp K_MUTE    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &bt BT_CLR_ALL    &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
+                                          &trans             &trans           &bootloader       &trans  &trans  &trans
             >;
         };
 
